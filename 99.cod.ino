@@ -21,7 +21,7 @@
 
 // DEFINIÇÕES
 #define pesoMin 0.010
-#define pesoMax 125.0
+#define pesoMax 65.0
 
 #define escala 0.0f  // aqui estaria o valor de calibração da nossa balanca
 
@@ -99,6 +99,11 @@ void loop() {
   if(Serial.available()>0){
     valor_lido = Serial.read();
 }
+  if(valor_lido=="0"){
+  Serial.print("Peso total: ");  
+  Serial.print(medida0, 2); 
+  Serial.println(" kg");
+  }
   if(valor_lido=="1"){
   Serial.print("Peso roda dianteira esquerda: ");                            // imprime no monitor serial
   Serial.print(medida1, 2);              // imprime peso na balança com 2 casas decimais 
@@ -129,11 +134,6 @@ void loop() {
   Serial.print(medida6, 2); 
   Serial.println(" kg");
   }
-if(valor_lido=="0"){
-  Serial.print("Peso total: ");  
-  Serial.print(medida0, 2); 
-  Serial.println(" kg");
-}
 
 if(valor_lido=="t"){                  // se pressionar t ou T
   scale1.tare();
