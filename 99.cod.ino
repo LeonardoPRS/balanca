@@ -20,9 +20,6 @@
 #define pinSCK8  37
 
 // DEFINIÇÕES
-#define pesoMin 0.010
-#define pesoMax 65.0
-
 #define escala 0.0f  // aqui estaria o valor de calibração da nossa balanca
 
 // INSTANCIANDO OBJETOS
