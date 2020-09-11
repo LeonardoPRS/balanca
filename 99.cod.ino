@@ -132,7 +132,7 @@ void loop() {
   Serial.println(" kg");
   }
 
-if(valor_lido=="t"){                  // se pressionar t ou T
+if(valor_lido=="t"){                  // se pressionar t
   scale1.tare();
   scale2.tare(); 
   scale3.tare(); 
